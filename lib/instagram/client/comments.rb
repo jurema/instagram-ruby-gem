@@ -15,8 +15,8 @@ module Instagram
       #   If getting this data of a protected user, you must be authenticated (and be allowed to see that user).
       # @rate_limited true
       # @see TODO:docs url
-      def media_comments(id, *args)
-        response = get("media/#{id}/comments")
+      def media_comments(id, options={})
+        response = get("media/#{id}/comments", options)
         response
       end
 
